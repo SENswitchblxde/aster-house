@@ -46,7 +46,9 @@ export type Article = ArticleMeta & { html: string };
 export const routeSlugFor = (file: string) => `${file}${URL_SUFFIX}`;
 
 export const fileForRouteSlug = (slug: string) =>
-  slug.endsWith(URL_SUFFIX) ? slug.slice(0, -URL_SUFFIX.length) : slug;
+  URL_SUFFIX && slug.endsWith(URL_SUFFIX)
+    ? slug.slice(0, -URL_SUFFIX.length)
+    : slug;
 
 /* ────────────────────────── discovery ────────────────────────── */
 
