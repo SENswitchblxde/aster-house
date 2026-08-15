@@ -9,7 +9,7 @@ const JOURNAL_DIR = path.join(process.cwd(), 'content', 'journal');
 const IMAGE_EXTENSIONS = ['.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif'];
 
 /** Every article URL is /journal/<filename>-journal */
-const URL_SUFFIX = '';
+const URL_SUFFIX: string = '';
 
 export const CATEGORIES = [
   'Writing',
@@ -46,9 +46,8 @@ export type Article = ArticleMeta & { html: string };
 export const routeSlugFor = (file: string) => `${file}${URL_SUFFIX}`;
 
 export const fileForRouteSlug = (slug: string) =>
-  URL_SUFFIX && slug.endsWith(URL_SUFFIX)
-    ? slug.slice(0, -URL_SUFFIX.length)
-    : slug;
+  // Guard the empty suffix: slice(0, -0) is slice(0, 0), which returns ''.
+  URL_SUFFIX && slug.endsWith(URL_SUFFIX) ? slug.slice(0, -URL_SUFFIX.length) : slug;
 
 /* ────────────────────────── discovery ────────────────────────── */
 
