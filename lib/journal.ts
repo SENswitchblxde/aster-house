@@ -8,7 +8,8 @@ const JOURNAL_DIR = path.join(process.cwd(), 'content', 'journal');
 
 const IMAGE_EXTENSIONS = ['.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif'];
 
-/** Every article URL is /journal/<filename>-journal */
+/** Appended to every article URL. Empty means /journal/<filename>. */
+// Typed as string, not the literal '', or TS narrows it to `never` when empty.
 const URL_SUFFIX: string = '';
 
 export const CATEGORIES = [

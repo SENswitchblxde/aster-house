@@ -94,15 +94,46 @@ export const books: Book[] = [
     services: ['Manuscript assessment', 'Copyediting', 'Cover design', 'Typesetting'],
   },
   {
+    slug: 'silent-vows',
+    title: 'Silent Vows',
+    subtitle: 'A novel',
+    category: 'Fiction',
+    sample: true,
+    artwork: {
+      src: '/books/silent-vows.webp',
+      alt: 'Cover of Silent Vows, a novel — a woman in a burgundy dress looking out from a balcony over a valley, with the title set in a high-contrast serif.',
+      aspect: 1024 / 1536,
+      hasSpine: true,
+    },
+    cover: { variant: 'frame', bg: '#EDE5D8', fg: '#641F2A', accent: '#641F2A', face: 'display' },
+    note: 'Historical fiction. Illustrated jacket, ruled border, foil title.',
+    approach:
+      'Historical fiction sells on period and register before it sells on plot, and both are set by the jacket. The image does the period; the typography does the register. A high-contrast serif and a ruled border place the book as literary rather than romance, which is the distinction a reader makes in about a second at a shop table. The title is stacked so the two words read as one shape, and the imprint sits above it in the position a reader expects on a jacketed hardback.',
+    spec: [
+      { label: 'Format', value: 'Hardback with jacket, 153 × 234mm' },
+      { label: 'Extent', value: '392 pages' },
+      { label: 'Text face', value: 'Adobe Caslon, 10.5/15pt' },
+      { label: 'Paper', value: '80gsm cream bookwove' },
+      { label: 'Finish', value: 'Matt jacket, foil title, burgundy head and tail bands' },
+    ],
+    services: ['Developmental editing', 'Copyediting', 'Cover design', 'Interior design', 'Print production'],
+  },
+  {
     slug: 'the-long-way-home',
     title: 'The Long Way Home',
     subtitle: 'A memoir',
     category: 'Memoir',
     sample: true,
+    artwork: {
+      src: '/books/the-long-way-home.webp',
+      alt: 'Cover of The Long Way Home, a memoir — a sepia photograph of a jeep on a mountain road, with the title set in burgundy on linen-textured board.',
+      aspect: 1024 / 1536,
+      hasSpine: true,
+    },
     cover: { variant: 'arc', bg: '#641F2A', fg: '#F5F0E7', accent: '#E4DACA', face: 'display' },
-    note: 'A memoir of migration and return. Full burgundy field, single geometric mark.',
+    note: 'A memoir of migration and return. Photographic cover on linen board, foil title.',
     approach:
-      'Memoir covers default to a photograph of the author, which usually flattens the book into a document. Here a single arc — a horizon, a road, a curve of return, depending on how far into the book you are — carries the whole idea. The burgundy is the house colour used at full strength, which is the only place on any Aster House Books object where that happens.',
+      'Memoir covers default to a photograph of the author, which usually flattens the book into a document. Here the photograph is of the road instead — a horizon, a route, a curve of return, depending on how far into the book you are. The image is desaturated almost to sepia so the burgundy title is the only strong colour on the jacket, and the board carries a linen texture so the object reads as something kept rather than something bought.',
     spec: [
       { label: 'Format', value: 'Hardback with jacket, 153 × 234mm' },
       { label: 'Extent', value: '272 pages, 16pp plate section' },

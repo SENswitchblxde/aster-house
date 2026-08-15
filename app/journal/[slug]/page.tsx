@@ -96,7 +96,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         </header>
 
         <Reveal>
-          <div className="relative aspect-[16/9] w-full bg-paper-deep sm:aspect-[21/9]">
+          {/*
+            Height is clamped rather than a fixed ratio: an aspect ratio scales
+            with viewport width, so 21/9 becomes 800px tall on a 1920 monitor
+            and taller still on an ultrawide. This keeps the band a consistent
+            slice of the screen on a phone, a laptop and a 34-inch display.
+          */}
+          <div
+            className="relative w-full overflow-hidden bg-paper-deep"
+            style={{ height: 'clamp(220px, 38vw, 560px)' }}
+          >
             <Image
               src={article.heroImage}
               alt={article.heroAlt}

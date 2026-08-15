@@ -1,0 +1,8 @@
+title: Why publish your book yourself?
+image: why-publish-your-book-yourself.webp
+alt: A quiet desk with a vase, a mug and a framed photograph of a woman reading, beside the line "Some books are worth making simply because they matter to you."
+standfirst: Traditional publishing has its place. It is not the only route to a book, and for a great many books it is not the right one.
+category: Publishing
+date: 2026-08-15
+cta-label: See publishing options
+cta-href: /publish

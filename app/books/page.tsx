@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function BooksPage() {
   /* Uneven column spans keep this reading as a press catalogue rather than a shop grid. */
-  const layout = ['lg:col-span-3', 'lg:col-span-3', 'lg:col-span-2', 'lg:col-span-2', 'lg:col-span-2', 'lg:col-span-3', 'lg:col-span-3', 'lg:col-span-2', 'lg:col-span-2'];
-  const offset = ['', 'lg:translate-y-16', '', 'lg:translate-y-10', 'lg:translate-y-24', '', 'lg:translate-y-12', '', 'lg:translate-y-8'];
+  const layout = ['lg:col-span-3', 'lg:col-span-3', 'lg:col-span-2', 'lg:col-span-2', 'lg:col-span-2', 'lg:col-span-3', 'lg:col-span-3', 'lg:col-span-2', 'lg:col-span-2', 'lg:col-span-2'];
+  const offset = ['', 'lg:translate-y-16', '', 'lg:translate-y-10', 'lg:translate-y-24', '', 'lg:translate-y-12', '', 'lg:translate-y-8', 'lg:translate-y-20'];
 
   return (
     <>

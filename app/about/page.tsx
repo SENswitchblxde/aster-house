@@ -180,8 +180,8 @@ export default function AboutPage() {
           </div>
           <Reveal delay={150} className="mt-14">
             <p className="max-w-measure font-text text-[0.95rem] leading-relaxed text-ink-faint">
-              Named biographies and photographs will be added here shortly. We would rather leave
-              this section short and honest than fill it with stock portraits.
+              We keep the studio deliberately small and the same editors stay with a book from
+              assessment to press, rather than passing it between departments.
             </p>
           </Reveal>
         </Container>
