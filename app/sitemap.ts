@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { site } from '@/content/site';
 import { books } from '@/content/books';
 import { getArticleSlugs } from '@/lib/journal';
-
+export const dynamic = 'force-static';
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
