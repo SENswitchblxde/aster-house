@@ -24,7 +24,7 @@ export default function BooksPage() {
           <Reveal>
             <p className="eyebrow text-burgundy">The list</p>
             <h1 className="mt-8 max-w-4xl font-display text-display-lg text-ink">
-              Coming from Aster House Books.
+              Aster House Books.
             </h1>
             <p className="mt-9 max-w-measure text-lede text-ink-soft">
               Books in the making, across genres and disciplines. Some begin with a finished
