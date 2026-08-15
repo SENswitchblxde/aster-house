@@ -54,8 +54,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     description: article.standfirst,
     datePublished: article.date,
     articleSection: article.category,
-    author: { '@type': 'Organization', name: 'Aster House' },
-    publisher: { '@type': 'Organization', name: 'Aster House' },
+    author: { '@type': 'Organization', name: 'Aster House Books' },
+    publisher: { '@type': 'Organization', name: 'Aster House Books' },
   };
 
   return (

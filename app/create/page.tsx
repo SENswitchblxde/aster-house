@@ -37,7 +37,7 @@ const craft = [
 ];
 
 export default function CreatePage() {
-  const covers = booksBySlugs(['meri-dilli', 'how-the-kite-learned-to-fly', 'a-life-in-letters']);
+  const covers = booksBySlugs(['meri-dilli', 'nanis-red-trunk', 'a-life-in-letters']);
   const hero = bookBySlug('a-life-in-letters')!;
 
   return (

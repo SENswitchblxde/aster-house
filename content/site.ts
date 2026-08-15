@@ -1,5 +1,5 @@
 export const site = {
-  name: 'Aster House',
+  name: 'Aster House Books',
   descriptor: 'Independent Publishing & Editorial Studio',
   positioning: 'You bring the story. We make the book.',
   url: 'https://asterhousebooks.com',

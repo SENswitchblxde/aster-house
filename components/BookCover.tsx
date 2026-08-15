@@ -24,14 +24,14 @@ function Imprint({ fg }: { fg: string }) {
     <span
       style={{
         color: fg,
-        fontSize: '2.6cqw',
-        letterSpacing: '0.28em',
+        fontSize: '2.3cqw',
+        letterSpacing: '0.2em',
         opacity: 0.75,
         fontWeight: 500,
       }}
       className="font-text uppercase"
     >
-      Aster House
+      Aster House Books
     </span>
   );
 }
@@ -292,6 +292,53 @@ function CoverArt({ book }: { book: Book }) {
 
 export default function BookCover({ book, className = '', physical = true }: Props) {
   const { bg } = book.cover;
+  const art = book.artwork;
+
+  /* Real artwork: show the photograph of the book, not a drawing of one. */
+  if (art) {
+    /* Renders that already include a spine and shadow get no overlay. */
+    const bare = art.hasSpine;
+    return (
+      <div className={`relative ${className}`}>
+        <div
+          className="relative w-full overflow-hidden transition-transform duration-700 ease-editorial"
+          style={{
+            aspectRatio: String(art.aspect),
+            boxShadow: bare
+              ? '0 18px 40px -24px rgba(37,35,33,0.45)'
+              : '0 1px 1px rgba(37,35,33,0.10), 0 10px 26px -12px rgba(37,35,33,0.42), 0 30px 60px -30px rgba(37,35,33,0.30)',
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={art.src}
+            alt={art.alt}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
+          {physical && !bare && (
+            <>
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-y-0 left-0"
+                style={{
+                  width: '6%',
+                  background:
+                    'linear-gradient(to right, rgba(0,0,0,0.34), rgba(0,0,0,0.10) 42%, rgba(255,255,255,0.10) 78%, rgba(0,0,0,0.05))',
+                }}
+              />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-y-0 right-0"
+                style={{ width: '1.5%', background: 'rgba(255,255,255,0.14)' }}
+              />
+            </>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div

@@ -20,7 +20,7 @@ import { getAllArticles } from '@/lib/journal';
 import { site } from '@/content/site';
 
 export default function HomePage() {
-  const heroBooks = booksBySlugs(['the-long-way-home', 'nine-monsoons', 'small-hours']);
+  const heroBooks = booksBySlugs(['nanis-red-trunk', 'nine-monsoons', 'small-hours']);
   const ghostBooks = booksBySlugs(['the-founders-notebook', 'a-life-in-letters', 'beyond-the-brief']);
   const shelf = booksBySlugs([
     'nine-monsoons',
@@ -28,7 +28,7 @@ export default function HomePage() {
     'the-founders-notebook',
     'meri-dilli',
     'small-hours',
-    'how-the-kite-learned-to-fly',
+    'nanis-red-trunk',
   ]);
   const articles = getAllArticles().slice(0, 3);
 
@@ -287,8 +287,21 @@ export default function HomePage() {
         <Container wide>
           <SectionHeading
             eyebrow="The list"
-            title="Coming from Aster House."
-            lede="Our first list is taking shape. Until then, explore a selection of sample editions showing how we approach book design, editorial presentation and production."
+            title="Coming from Aster House Books."
+            lede={
+              <>
+                <p>
+                  Books in the making, across genres and disciplines. Some begin with a finished
+                  manuscript; others with an idea, a conversation or a story waiting to be told.
+                </p>
+                <p className="mt-6 text-body">
+                  Fiction, memoir, business, ideas, illustrated books and more. Each one is shaped
+                  with care, from the words on the page to the book in your hands. These sample
+                  editions offer a glimpse of what Aster House Books is about &mdash; and more books
+                  are on their way.
+                </p>
+              </>
+            }
           />
 
           {/* Irregular shelf: sizes and baselines deliberately uneven */}

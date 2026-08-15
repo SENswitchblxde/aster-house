@@ -4,7 +4,7 @@ import PageHero from '@/components/PageHero';
 
 export const metadata: Metadata = {
   title: 'Terms',
-  description: 'Terms governing the use of the Aster House website.',
+  description: 'Terms governing the use of the Aster House Books website.',
   alternates: { canonical: '/terms' },
 };
 
@@ -24,7 +24,7 @@ export default function TermsPage() {
               launch. It should cover, at minimum:
             </p>
             <ul>
-              <li>ownership of website content and the Aster House name and marks</li>
+              <li>ownership of website content and the Aster House Books name and marks</li>
               <li>that prices shown are indicative starting points, not offers</li>
               <li>that sample editions are design specimens and not published titles</li>
               <li>that no sales, rankings or outcomes are guaranteed</li>

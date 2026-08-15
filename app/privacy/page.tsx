@@ -4,7 +4,7 @@ import PageHero from '@/components/PageHero';
 
 export const metadata: Metadata = {
   title: 'Privacy',
-  description: 'How Aster House handles enquiries, manuscripts and personal data.',
+  description: 'How Aster House Books handles enquiries, manuscripts and personal data.',
   alternates: { canonical: '/privacy' },
 };
 

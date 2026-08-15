@@ -22,7 +22,7 @@ export async function generateMetadata({
   if (!book) return {};
   return {
     title: `${book.title} — sample edition`,
-    description: `${book.title}: a ${book.category.toLowerCase()} sample edition from Aster House. ${book.note}`,
+    description: `${book.title}: a ${book.category.toLowerCase()} sample edition from Aster House Books. ${book.note}`,
     alternates: { canonical: `/books/${book.slug}` },
   };
 }
@@ -102,7 +102,7 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
               </div>
 
               <p className="mt-12 max-w-measure border-l-2 border-burgundy pl-6 font-text text-[0.95rem] leading-relaxed text-ink-soft">
-                This is a design specimen produced by Aster House, not a published title. It is not
+                This is a design specimen produced by Aster House Books, not a published title. It is not
                 for sale and carries no author attribution. When our first list is announced, real
                 editions will appear here with their authors, ISBNs and purchase links.
               </p>
@@ -110,6 +110,28 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
           </div>
         </Container>
       </section>
+
+      {book.artwork?.wrap && (
+        <section className="bg-paper-deep py-20 sm:py-28">
+          <Container wide>
+            <Reveal>
+              <h2 className="eyebrow text-ink-faint">The full jacket</h2>
+              <p className="mt-5 max-w-measure font-text text-body text-ink-soft">
+                Back cover, spine and front as one printed sheet — which is how a jacket is actually
+                designed, and why the spine has to work as hard as the front.
+              </p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={book.artwork.wrap.src}
+                alt={book.artwork.wrap.alt}
+                loading="lazy"
+                className="mt-10 w-full"
+                style={{ boxShadow: '0 24px 60px -30px rgba(37,35,33,0.45)' }}
+              />
+            </Reveal>
+          </Container>
+        </section>
+      )}
 
       <section className="border-t border-ink/12 py-20 sm:py-28">
         <Container wide>

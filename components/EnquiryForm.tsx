@@ -51,7 +51,7 @@ const BUDGETS = [
   'Above ₹6,00,000',
 ];
 
-const SOURCES = ['Search', 'A recommendation', 'Social media', 'The Aster House Journal', 'An event', 'Other'];
+const SOURCES = ['Search', 'A recommendation', 'Social media', 'The Aster House Books Journal', 'An event', 'Other'];
 
 export default function EnquiryForm() {
   const params = useSearchParams();

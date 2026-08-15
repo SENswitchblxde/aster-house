@@ -28,11 +28,11 @@ const book = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'Aster House — Independent Publishing & Editorial Studio',
-    template: '%s — Aster House',
+    default: 'Aster House Books — Independent Publishing & Editorial Studio',
+    template: '%s — Aster House Books',
   },
   description:
-    'Aster House is an independent publishing and editorial studio in India, working with authors globally. Assisted publishing, nonfiction ghostwriting, manuscript editing, book design and bespoke book production.',
+    'Aster House Books is an independent publishing and editorial studio in India, working with authors globally. Assisted publishing, nonfiction ghostwriting, manuscript editing, book design and bespoke book production.',
   keywords: [
     'book publishing India',
     'assisted publishing India',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: site.name,
-    title: 'Aster House — Independent Publishing & Editorial Studio',
+    title: 'Aster House Books — Independent Publishing & Editorial Studio',
     description:
       'You bring the story. We make the book. Publishing, ghostwriting, editorial and book production for authors in India and worldwide.',
     locale: 'en_IN',

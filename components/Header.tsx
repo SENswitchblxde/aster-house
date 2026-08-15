@@ -25,13 +25,13 @@ export function Wordmark({
 }) {
   return (
     <span
-      className={`flex items-center gap-[0.45em] font-display uppercase leading-none tracking-[0.14em] ${
+      className={`flex items-center gap-[0.42em] font-display uppercase leading-none tracking-[0.13em] ${
         tone === 'paper' ? 'text-paper-light' : 'text-ink'
       } ${className}`}
     >
-      <span>Aster</span>
-      <AsterMark className="h-[0.62em] w-[0.62em] text-burgundy" />
-      <span>House</span>
+      {/* Mark leads, as it does on the printed jackets. */}
+      <AsterMark className="h-[0.68em] w-[0.68em] shrink-0 text-burgundy" />
+      <span>Aster House Books</span>
     </span>
   );
 }
@@ -77,7 +77,7 @@ export default function Header() {
       </a>
 
       <div className="mx-auto flex max-w-shelf items-center justify-between gap-8 px-6 py-5 sm:px-10 lg:px-14">
-        <Link href="/" aria-label="Aster House — home" className="shrink-0">
+        <Link href="/" aria-label="Aster House Books — home" className="shrink-0">
           <Wordmark className="text-[1.02rem] sm:text-[1.15rem]" />
         </Link>
 

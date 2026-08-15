@@ -1,7 +1,7 @@
 /**
  * NOT IN USE.
  *
- * Aster House has no published authors yet, and inventing praise would
+ * Aster House Books has no published authors yet, and inventing praise would
  * undermine the one thing this site is selling. The component exists so
  * that real quotes can be dropped in the moment there are real quotes.
  */

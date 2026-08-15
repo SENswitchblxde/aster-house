@@ -6,9 +6,9 @@ import PageHero from '@/components/PageHero';
 import CTASection from '@/components/CTASection';
 
 export const metadata: Metadata = {
-  title: 'About Aster House — an independent publishing and editorial studio',
+  title: 'About Aster House Books — an independent publishing and editorial studio',
   description:
-    'Aster House is an independent publishing and editorial studio based in India, working with authors globally. Editorial judgment, craft, transparency and author ownership.',
+    'Aster House Books is an independent publishing and editorial studio based in India, working with authors globally. Editorial judgment, craft, transparency and author ownership.',
   alternates: { canonical: '/about' },
 };
 
@@ -59,37 +59,88 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Publishing is more than putting a book into print."
-        lede="Aster House is an independent publishing and editorial studio. We are based in India and work with authors anywhere."
+        lede="Aster House Books is an independent publishing and editorial studio. We are based in India and work with authors anywhere."
       />
 
       <section className="py-24 sm:py-32">
         <Container>
           <div className="grid gap-14 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
-            <SectionHeading eyebrow="Who we are" title="A studio, not a factory." />
+            <SectionHeading eyebrow="Who we are" title="Books are our business." />
             <Reveal delay={100} className="max-w-measure space-y-6 font-text text-body text-ink-soft">
               <p>
-                Aster House was started because there is a wide gap in publishing and not much sitting
-                in it. On one side, traditional houses acquire a very small number of books and take
-                years to do it. On the other, a great many services will convert a Word file into a
-                paperback and call that publishing.
+                We&apos;ve been making them for a long time. Aster House Books was built by four
+                editors with between 9 and 20 years of experience across publishing, editorial,
+                writing and content. Between us, we&apos;ve worked across the book lifecycle — from
+                the first rough manuscript to the final printed page.
+              </p>
+              <p>
+                We&apos;ve edited, rewritten, commissioned, developed, structured, proofread and
+                produced. We&apos;ve worked with first-time writers and experienced authors, experts
+                and professionals, complex subjects and very personal stories. In other words,
+                we&apos;ve seen pretty much everything that can happen to a book.
+              </p>
+              <p>
+                And we&apos;ve learned that a good book isn&apos;t the result of one clever idea.
+                It&apos;s the result of hundreds of decisions made well: what stays, what goes, where
+                the argument needs strengthening, where the voice needs protecting, how a chapter
+                should move, what the cover should say before anyone reads a word, and how the
+                finished book should feel in your hands.
+              </p>
+              <p className="border-l-2 border-burgundy pl-6 text-ink">
+                That&apos;s what we bring to Aster House Books.
+              </p>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-ink/12 py-24 sm:py-32">
+        <Container>
+          <div className="grid gap-14 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
+            <SectionHeading eyebrow="Why we exist" title="The gap in the middle." />
+            <Reveal delay={100} className="max-w-measure space-y-6 font-text text-body text-ink-soft">
+              <p>
+                Aster House Books was started because there is a wide gap in publishing and not much
+                sitting in it. On one side, traditional houses acquire a very small number of books
+                and take years to do it. On the other, a great many services will convert a Word file
+                into a paperback and call that publishing.
               </p>
               <p>
                 In between are the books that deserve a proper editor, a designer who reads them, and
                 someone who knows what happens on press — but whose authors have no route to any of
                 that. Those are the books we want.
               </p>
-              <p>
-                We work on a small number of projects at a time. We say no to manuscripts we cannot
-                improve and to projects where the author&apos;s expectations and the market&apos;s
-                reality have not met. That is not exclusivity. It is the only way the work stays good.
-              </p>
-              <p className="border-l-2 border-burgundy pl-6 text-ink">
-                We are new. Our first list is in progress, and the books on this site are sample
-                editions rather than published titles. We would rather tell you that than borrow
-                credibility we have not earned yet.
-              </p>
             </Reveal>
           </div>
+        </Container>
+      </section>
+
+      <section className="bg-ink py-24 text-paper-light sm:py-32">
+        <Container>
+          <SectionHeading
+            eyebrow="How we work"
+            tone="paper"
+            title={
+              <>
+                We don&apos;t just publish books.
+                <span className="block">We know how they&apos;re made.</span>
+              </>
+            }
+          />
+          <Reveal delay={100} className="mt-10 max-w-measure space-y-6 font-text text-body text-paper/75">
+            <p>
+              Some people come to us with a finished manuscript. Some have 60,000 words and no idea
+              what to do with them. Some have a subject they&apos;re an expert in but have never
+              written a book. Some have a lifetime of stories. And some simply have a sentence that
+              starts with, &ldquo;I&apos;ve always wanted to write a book&hellip;&rdquo;
+            </p>
+            <p className="text-paper-light">
+              Wherever the book begins, we know how to take it forward. We can help you develop it,
+              write it, edit it, design it, produce it and publish it — with experienced editors
+              involved throughout, rather than handing your book from one anonymous service to
+              another.
+            </p>
+          </Reveal>
         </Container>
       </section>
 
@@ -129,8 +180,8 @@ export default function AboutPage() {
           </div>
           <Reveal delay={150} className="mt-14">
             <p className="max-w-measure font-text text-[0.95rem] leading-relaxed text-ink-faint">
-              Named biographies and photographs will be added here as the studio grows. We would
-              rather leave this section honest and short than fill it with stock portraits.
+              Named biographies and photographs will be added here shortly. We would rather leave
+              this section short and honest than fill it with stock portraits.
             </p>
           </Reveal>
         </Container>

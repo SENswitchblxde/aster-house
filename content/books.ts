@@ -1,7 +1,7 @@
 /**
  * SAMPLE EDITIONS.
  *
- * These are design specimens produced in-house to demonstrate Aster House's
+ * These are design specimens produced in-house to demonstrate Aster House Books's
  * approach to covers, typography and production. They are not published titles
  * and carry no author attribution by design — the imprint line stands where an
  * author name would sit. When real titles exist, add them here with an
@@ -23,6 +23,21 @@ export type Book = {
   subtitle?: string;
   category: string;
   sample: boolean;
+  /**
+   * Real cover artwork. When present it replaces the drawn cover entirely.
+   * `aspect` is width/height — books are not all the same trim size, and the
+   * catalogue looks more like a real list when they aren't forced to match.
+   * `hasSpine` means the artwork is already a 3D render with its own spine
+   * and shadow, so we don't overlay ours on top.
+   */
+  artwork?: {
+    src: string;
+    alt: string;
+    aspect: number;
+    hasSpine?: boolean;
+    /** Optional full jacket spread shown on the sample edition page. */
+    wrap?: { src: string; alt: string };
+  };
   cover: {
     variant: CoverVariant;
     bg: string;
@@ -87,7 +102,7 @@ export const books: Book[] = [
     cover: { variant: 'arc', bg: '#641F2A', fg: '#F5F0E7', accent: '#E4DACA', face: 'display' },
     note: 'A memoir of migration and return. Full burgundy field, single geometric mark.',
     approach:
-      'Memoir covers default to a photograph of the author, which usually flattens the book into a document. Here a single arc — a horizon, a road, a curve of return, depending on how far into the book you are — carries the whole idea. The burgundy is the house colour used at full strength, which is the only place on any Aster House object where that happens.',
+      'Memoir covers default to a photograph of the author, which usually flattens the book into a document. Here a single arc — a horizon, a road, a curve of return, depending on how far into the book you are — carries the whole idea. The burgundy is the house colour used at full strength, which is the only place on any Aster House Books object where that happens.',
     spec: [
       { label: 'Format', value: 'Hardback with jacket, 153 × 234mm' },
       { label: 'Extent', value: '272 pages, 16pp plate section' },
@@ -155,20 +170,27 @@ export const books: Book[] = [
     services: ['Copyediting', 'Indexing', 'Figure preparation', 'Typesetting', 'ISBN & metadata'],
   },
   {
-    slug: 'how-the-kite-learned-to-fly',
-    title: 'How the Kite Learned to Fly',
+    slug: 'nanis-red-trunk',
+    title: "Nani's Red Trunk",
+    subtitle: 'One trunk. A hundred stories.',
     category: "Children's",
     sample: true,
-    cover: { variant: 'field', bg: '#24352E', fg: '#F5F0E7', accent: '#C4922F', face: 'display' },
-    note: 'A picture book. Illustration coordinated, colour proofed on press.',
+    artwork: {
+      src: '/books/nanis-red-trunk.webp',
+      alt: "Cover of Nani's Red Trunk — an illustrated hardback showing a grandmother and granddaughter looking into an old red travelling trunk.",
+      aspect: 1122 / 1402,
+      hasSpine: true,
+    },
+    cover: { variant: 'field', bg: '#7A1D22', fg: '#F5F0E7', accent: '#C4922F', face: 'display' },
+    note: 'A picture book. Illustration commissioned and art-directed, colour proofed on press.',
     approach:
-      'A picture book is a colour-management project wearing a friendly jacket. We commission and art-direct the illustrator, plan the page turns against the text before any final artwork is made, and proof on the actual stock — because a kite that is warm ochre on screen can arrive from press looking like mustard.',
+      'A picture book is a colour-management project wearing a friendly jacket. The illustration is commissioned and art-directed, page turns are planned against the text before any final artwork is made, and the book is proofed on the actual stock — because a red trunk that glows on screen can arrive from press looking brown. Case-bound rather than paperback, because this is a book that gets read at bedtime several hundred times.',
     spec: [
-      { label: 'Format', value: 'Hardback, 240 × 240mm' },
-      { label: 'Extent', value: '32 pages' },
+      { label: 'Format', value: 'Case-bound hardback, 216 × 270mm' },
+      { label: 'Extent', value: '40 pages' },
       { label: 'Text face', value: 'Bree Serif, 16/24pt' },
       { label: 'Paper', value: '170gsm matt art, 2.5mm greyboard' },
-      { label: 'Finish', value: 'Matt lamination, spot gloss on kite' },
+      { label: 'Finish', value: 'Matt lamination, spot gloss on title' },
     ],
     services: ['Illustration coordination', 'Art direction', 'Interior design', 'Colour proofing', 'Print production'],
   },
@@ -178,6 +200,15 @@ export const books: Book[] = [
     subtitle: 'A photographic record',
     category: 'Photography',
     sample: true,
+    artwork: {
+      src: '/books/meri-dilli.webp',
+      alt: 'Cover of Meri Dilli!, a photographic record of Delhi — brush-lettered title over a collaged street scene with an auto-rickshaw and the Red Fort.',
+      aspect: 789 / 1024,
+      wrap: {
+        src: '/books/meri-dilli-wrap.webp',
+        alt: 'The full jacket for Meri Dilli!, showing back cover, spine and front cover as a single spread.',
+      },
+    },
     cover: { variant: 'field', bg: '#252321', fg: '#F5F0E7', accent: '#641F2A', face: 'text', tracking: '0.3em' },
     note: 'A large-format photography book. Duotone proofing, offset print run.',
     approach:

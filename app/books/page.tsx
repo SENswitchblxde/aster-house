@@ -6,9 +6,9 @@ import CTASection from '@/components/CTASection';
 import { books } from '@/content/books';
 
 export const metadata: Metadata = {
-  title: 'Books — sample editions from Aster House',
+  title: 'Books — sample editions from Aster House Books',
   description:
-    'Sample editions designed in-house by Aster House, showing our approach to cover design, typography, interior layout and print production across fiction, poetry, memoir, business, academic, illustrated and bespoke books.',
+    'Sample editions designed in-house by Aster House Books, showing our approach to cover design, typography, interior layout and print production across fiction, poetry, memoir, business, academic, illustrated and bespoke books.',
   alternates: { canonical: '/books' },
 };
 
@@ -24,12 +24,16 @@ export default function BooksPage() {
           <Reveal>
             <p className="eyebrow text-burgundy">The list</p>
             <h1 className="mt-8 max-w-4xl font-display text-display-lg text-ink">
-              Coming from Aster House.
+              Coming from Aster House Books.
             </h1>
             <p className="mt-9 max-w-measure text-lede text-ink-soft">
-              Our first list is taking shape. Until then, these are sample editions — books designed,
-              set and specified in-house to show how we work. They are not published titles, and we
-              would rather show you real design than borrowed credibility.
+              Books in the making, across genres and disciplines. Some begin with a finished
+              manuscript; others with an idea, a conversation or a story waiting to be told.
+            </p>
+            <p className="mt-6 max-w-measure font-text text-body text-ink-soft">
+              Fiction, memoir, business, ideas, illustrated books and more. Each one is shaped with
+              care, from the words on the page to the book in your hands. These sample editions
+              offer a glimpse of what Aster House Books is about. More books are on their way.
             </p>
           </Reveal>
         </Container>

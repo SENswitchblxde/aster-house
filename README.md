@@ -1,4 +1,4 @@
-# Aster House
+# Aster House Books
 
 Independent Publishing & Editorial Studio — production website.
 Next.js 15 (App Router) · TypeScript · Tailwind CSS.
