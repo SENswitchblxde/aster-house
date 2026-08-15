@@ -1,4 +1,4 @@
-title: lalala idk lol hehe
+title: What a book editor actually does
 image: editor.svg
 alt: An abstract composition of overlapping manuscript pages with a burgundy rule.
 standfirst: Most authors meet the word 'editing' and picture someone fixing commas. That is the last ten per cent of the job, and the least important.
