@@ -159,10 +159,9 @@ Formspree, Getform, Basin or Web3Forms.
 Unset, the form shows an error directing the visitor to email instead — rather
 than pretending the enquiry was received.
 
-**File uploads are the weak point.** Most form services only accept attachments
-on paid tiers, and manuscript-sized files often exceed the limit. Either pay for
-that tier, or drop the upload field and ask authors to email the manuscript once
-you have replied.
+The form deliberately does not accept manuscript uploads. Authors are asked for
+the manuscript after the first reply, which avoids unsolicited full manuscripts
+landing in a third-party form service with no confidentiality trail.
 
 ### What static export costs you
 

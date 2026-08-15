@@ -173,36 +173,3 @@ export function RadioGroup({
     </fieldset>
   );
 }
-
-export function FileField({
-  id,
-  name,
-  label,
-  hint,
-}: {
-  id: string;
-  name: string;
-  label: string;
-  hint?: string;
-}) {
-  return (
-    <div>
-      <Label htmlFor={id} optional>
-        {label}
-      </Label>
-      <input
-        id={id}
-        name={name}
-        type="file"
-        accept=".doc,.docx,.pdf,.rtf,.txt,.odt"
-        aria-describedby={hint ? `${id}-hint` : undefined}
-        className="mt-3 block w-full font-text text-[0.95rem] text-ink-soft file:mr-4 file:cursor-pointer file:border file:border-ink/25 file:bg-transparent file:px-5 file:py-3 file:font-text file:text-[0.7rem] file:uppercase file:tracking-[0.16em] file:text-ink hover:file:border-ink"
-      />
-      {hint && (
-        <p id={`${id}-hint`} className="mt-2 font-text text-[0.85rem] text-ink-faint">
-          {hint}
-        </p>
-      )}
-    </div>
-  );
-}

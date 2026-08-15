@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useState, type FormEvent } from 'react';
 import Button from './Button';
-import { FileField, RadioGroup, SelectField, TextArea, TextField } from './FormField';
+import { RadioGroup, SelectField, TextArea, TextField } from './FormField';
 
 const INTENTS = [
   'Publish a finished manuscript',
@@ -41,14 +41,6 @@ const GENRES = [
   'Art or illustrated',
   'Family or legacy',
   'Other',
-];
-
-const BUDGETS = [
-  'Not sure yet',
-  'Under ₹1,00,000',
-  '₹1,00,000 – ₹3,00,000',
-  '₹3,00,000 – ₹6,00,000',
-  'Above ₹6,00,000',
 ];
 
 const SOURCES = ['Search', 'A recommendation', 'Social media', 'The Aster House Books Journal', 'An event', 'Other'];
@@ -169,19 +161,16 @@ export default function EnquiryForm() {
           placeholder="What the book is, who it is for, where you have got to, and what you think you need."
         />
 
-        <FileField
-          id="manuscript-file"
-          name="manuscriptFile"
-          label="Upload manuscript"
-          hint="DOC, DOCX, PDF, RTF or TXT. A sample chapter is often more useful than the whole thing."
-        />
+        <p className="max-w-measure border-l-2 border-burgundy pl-6 font-text text-[0.95rem] leading-relaxed text-ink-soft">
+          No need to send the manuscript yet. We&apos;ll ask for it — or for a sample chapter — once
+          we&apos;ve read your note and replied.
+        </p>
       </fieldset>
 
       <fieldset className="space-y-8">
         <legend className="sr-only">Practicalities</legend>
-        <p className="eyebrow text-burgundy">iii &mdash; Practicalities</p>
+        <p className="eyebrow text-burgundy">iii &mdash; One last thing</p>
         <div className="grid gap-8 sm:grid-cols-2">
-          <SelectField id="budget" name="budget" label="Budget range" options={BUDGETS} optional />
           <SelectField id="source" name="source" label="How did you hear about us?" options={SOURCES} optional />
         </div>
       </fieldset>
