@@ -1,0 +1,8 @@
+title: The book is not finished when the manuscript is
+image: aster-house-example-blog.png
+alt: An editorial desk with a manuscript, book jacket and production notes in ivory, charcoal and burgundy.
+standfirst: A manuscript can be finished and the book can still be wrong. Good publishing connects the words, the object and the reader.
+category: Publishing
+date: 2026-08-15
+cta-label: Explore Aster House Books
+cta-href: /create
