@@ -108,7 +108,7 @@ export default function GhostwritingPage() {
             <SectionHeading
               eyebrow="The process"
               tone="paper"
-              title="Eight stages, nine to eighteen months."
+              title="From the first conversation to the final copy."
               lede="Nothing is written before the outline is signed off, and nothing is a surprise."
               className="lg:sticky lg:top-32 lg:self-start"
             />
