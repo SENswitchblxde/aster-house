@@ -9,7 +9,7 @@ const JOURNAL_DIR = path.join(process.cwd(), 'content', 'journal');
 const IMAGE_EXTENSIONS = ['.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif'];
 
 /** Every article URL is /journal/<filename>-journal */
-const URL_SUFFIX = '-journal';
+const URL_SUFFIX = '';
 
 export const CATEGORIES = [
   'Writing',
