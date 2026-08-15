@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -25,16 +25,43 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Cache Next.js build
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+
       - name: Install
         run: npm ci
 
+      # Unpacks any uploaded .zip and checks every post. Fails with a plain
+      # English message if a post is missing something.
+      - name: Prepare journal
+        run: node scripts/prepare-journal.mjs
+
       - name: Build
         env:
-          # ── Project repo (username.github.io/aster-house)? Uncomment: ──
+          # Project repo (username.github.io/aster-house)? Uncomment:
           # BASE_PATH: /aster-house
-          # ── Custom domain or <username>.github.io repo? Leave commented. ──
           NEXT_PUBLIC_FORM_ENDPOINT: ${{ secrets.FORM_ENDPOINT }}
         run: npm run build
+
+      # If a zip was unpacked, tidy the repo so it holds the loose files.
+      # Uses GITHUB_TOKEN, so this commit does not retrigger the workflow —
+      # the site has already been built above.
+      - name: Commit unpacked files
+        run: |
+          if [ -n "$(git status --porcelain content/journal)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add content/journal
+            git commit -m "Unpack journal upload [skip ci]"
+            git push
+          fi
 
       - uses: actions/configure-pages@v5
 

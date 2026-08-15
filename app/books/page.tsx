@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+
 import Container from '@/components/Container';
 import Reveal from '@/components/Reveal';
 import BookCard from '@/components/BookCard';

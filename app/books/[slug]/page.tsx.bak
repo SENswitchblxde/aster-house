@@ -100,6 +100,12 @@ export default async function BookPage({ params }: { params: Promise<{ slug: str
                   ))}
                 </ul>
               </div>
+
+              <p className="mt-12 max-w-measure border-l-2 border-burgundy pl-6 font-text text-[0.95rem] leading-relaxed text-ink-soft">
+                This is a design specimen produced by Aster House Books, not a published title. It is not
+                for sale and carries no author attribution. When our first list is announced, real
+                editions will appear here with their authors, ISBNs and purchase links.
+              </p>
             </Reveal>
           </div>
         </Container>
