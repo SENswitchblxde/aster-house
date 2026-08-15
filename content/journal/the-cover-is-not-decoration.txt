@@ -1,0 +1,8 @@
+title: The cover is not decoration
+image: cover.svg
+alt: A grid of abstract book cover compositions in ivory, charcoal and burgundy.
+standfirst: A book cover has one job at 40mm wide on a phone screen, another at arm's length on a table, and a third in the hand. Most covers are designed for only one of them.
+category: Book Design
+date: 2026-03-14
+cta-label: Explore book production
+cta-href: /create

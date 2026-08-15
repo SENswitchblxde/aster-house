@@ -1,15 +1,3 @@
----
-title: "The cover is not decoration"
-standfirst: "A book cover has one job at 40mm wide on a phone screen, another at arm's length on a table, and a third in the hand. Most covers are designed for only one of them."
-category: "Book Design"
-date: "2026-03-14"
-heroImage: "/journal/cover.svg"
-heroAlt: "A grid of abstract book cover compositions in ivory, charcoal and burgundy."
-cta:
-  label: "Explore book production"
-  href: "/create"
----
-
 A cover is not a picture attached to the front of a book. It is a piece of functional design that has to work at three completely different sizes, in two completely different media, for two completely different readers.
 
 ## The thumbnail
@@ -43,3 +31,4 @@ The answers change everything: the trim size, the extent, the paper, whether the
 ## And one thing we do not do
 
 We do not present twelve cover routes. Twelve routes is not generosity, it is a designer declining to have a point of view and asking the author to art-direct by committee. Two or three considered directions, each with an argument behind it, produces a better book and a shorter argument.
+

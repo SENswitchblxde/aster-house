@@ -42,27 +42,59 @@ component changes.
 
 ## The journal (your blog)
 
-Add a file to `content/journal/`:
+Everything lives in `content/journal/`. Drop three files in, and the article
+appears — no registration, no code changes, no rebuild config.
 
-```md
----
-title: "How long should a first novel be?"
-standfirst: "One sentence that makes someone want to read on."
-category: "Writing"        # Writing | Editing | Publishing | Book Design | Ghostwriting | Authors | Industry
-date: "2026-08-14"
-heroImage: "/journal/my-image.jpg"
-heroAlt: "Describe the image for screen readers."
-cta:
-  label: "Explore editorial"
-  href: "/editorial"
----
-
-Body in markdown. Images inline with ![alt](/journal/another-image.jpg).
+```
+content/journal/
+  how-long-should-a-novel-be.md     ← the article, plain markdown
+  how-long-should-a-novel-be.txt    ← the metadata
+  how-long-should-a-novel-be.jpg    ← the hero image
 ```
 
-Drop images into `public/journal/`. Reading time is calculated automatically if
-you omit `readingTime`. Routes, sitemap entries and related-article links appear
-on their own.
+That publishes at:
+
+```
+asterhousebooks.com/journal/how-long-should-a-novel-be-journal
+```
+
+The URL is always the **filename plus `-journal`**.
+
+### The .txt file
+
+```
+title: How long should a first novel be?
+image: how-long-should-a-novel-be.jpg
+alt: Describe the image for screen readers.
+standfirst: One sentence that makes someone want to read on.
+category: Writing
+date: 2026-08-14
+cta-label: Explore editorial
+cta-href: /editorial
+```
+
+- `image:` is just the filename — it resolves to the journal folder. An absolute
+  path (`/books/something.webp`) or a full URL also works.
+- Categories: Writing, Editing, Publishing, Book Design, Ghostwriting, Authors,
+  Industry. Anything else falls back to Publishing.
+- Every key is optional. Miss the title and it is derived from the filename;
+  miss the date and the file's modified date is used; miss the image entirely
+  and any file in the folder sharing the article's name is picked up
+  automatically. A bare `.md` with no `.txt` still builds.
+
+### Images
+
+Put them in `content/journal/` beside the article. A prebuild step copies them
+into `public/journal/` automatically — `npm run journal` runs it on demand.
+
+Inline images in the markdown use the bare filename too:
+
+```md
+![A caption for screen readers](another-picture.jpg)
+```
+
+Reading time is calculated from the word count. Sitemap entries, related-article
+links and the category list update themselves.
 
 ## Sample editions
 

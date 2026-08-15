@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Overlapping manuscript pages with a burgundy rule">
+  <rect width="1200" height="675" fill="#EDE5D8"/>
+  <g opacity="0.9">
+    <rect x="270" y="120" width="330" height="470" fill="#F5F0E7" transform="rotate(-6 435 355)"/>
+    <rect x="380" y="95" width="330" height="470" fill="#FBF8F2" transform="rotate(3 545 330)"/>
+    <rect x="500" y="130" width="330" height="470" fill="#F5F0E7" transform="rotate(-2 665 365)"/>
+  </g>
+  <g stroke="#252321" stroke-opacity="0.22" stroke-width="2">
+    <path d="M540 210h250M540 250h250M540 290h190M540 330h250M540 370h215M540 450h250M540 490h140"/>
+  </g>
+  <path d="M540 405h250" stroke="#641F2A" stroke-width="5"/>
+  <circle cx="905" cy="405" r="7" fill="#641F2A"/>
+</svg>

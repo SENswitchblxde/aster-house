@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="An arc suggesting a horizon or a road returning">
+  <rect width="1200" height="675" fill="#641F2A"/>
+  <path d="M0 560C260 340 500 300 700 300s360 60 500 190" fill="none" stroke="#F5F0E7" stroke-width="3"/>
+  <path d="M0 620C300 420 540 380 740 380s340 70 460 180" fill="none" stroke="#F5F0E7" stroke-opacity="0.45" stroke-width="2"/>
+  <circle cx="700" cy="300" r="10" fill="#E4DACA"/>
+  <path d="M120 120h300" stroke="#E4DACA" stroke-width="2"/>
+</svg>

@@ -1,15 +1,3 @@
----
-title: "Where to begin a memoir when you don't know where to begin"
-standfirst: "Nobody starts at the beginning. The people who finish memoirs start at a specific afternoon and work outward."
-category: "Ghostwriting"
-date: "2026-04-30"
-heroImage: "/journal/memoir.svg"
-heroAlt: "An abstract arc composition in burgundy suggesting a horizon or a road."
-cta:
-  label: "Talk to us about your book"
-  href: "/start-your-book?service=ghostwriting"
----
-
 Most people who want to write a memoir stall in the same place. They sit down to begin, and the question that arrives is *where does this start*, and the honest answer is somewhere around 1954 with a grandparent, which is clearly wrong, so they close the file.
 
 The problem is not a lack of material. It is that the material is being asked to arrive in chronological order, which is the least interesting order available and the hardest one to write.
@@ -45,3 +33,4 @@ Some people should write their own memoir. Some people have a remarkable life, n
 The process is not that someone invents your life. It is that someone conducts twenty to forty hours of structured interviews, reads whatever archive exists, builds a chapter outline you approve, and then does the part that is a craft rather than a memory: making the sentences carry what you meant.
 
 You still make every decision. You just do not have to face the blank page at eleven at night after a full day.
+

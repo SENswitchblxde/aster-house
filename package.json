@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/sync-journal-assets.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/sync-journal-assets.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "journal": "node scripts/sync-journal-assets.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

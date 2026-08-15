@@ -1,15 +1,3 @@
----
-title: "What it costs to publish a book in India, and why"
-standfirst: "Publishing quotes vary by a factor of ten for what looks like the same service. Here is what is actually inside the number."
-category: "Publishing"
-date: "2026-05-27"
-heroImage: "/journal/costs.svg"
-heroAlt: "A stepped abstract diagram in ivory and charcoal suggesting stacked production costs."
-cta:
-  label: "See publishing options"
-  href: "/publish"
----
-
 Ask three publishers what it costs to publish a book and you will get three numbers that do not resemble each other. This is not because one of them is lying. It is because "publishing a book" describes anything from uploading a PDF to a print-on-demand platform to producing a cloth-bound illustrated edition with a proper editorial process behind it.
 
 The useful question is not "how much does it cost". It is "what is inside this quote".
@@ -54,3 +42,4 @@ No publisher, of any size, in any country, can guarantee sales. Anyone who does 
 What can be guaranteed is the work: that the manuscript was properly edited, that the cover belongs to the book, that the interior is typeset by someone who understands what a widow is, and that the metadata is correct so the book can be found by people looking for it.
 
 That is a narrower promise. It is also the only honest one.
+

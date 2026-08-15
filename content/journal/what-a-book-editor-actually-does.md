@@ -1,15 +1,3 @@
----
-title: "What a book editor actually does"
-standfirst: "Most authors meet the word 'editing' and picture someone fixing commas. That is the last ten per cent of the job, and the least important."
-category: "Editing"
-date: "2026-06-18"
-heroImage: "/journal/editor.svg"
-heroAlt: "An abstract composition of overlapping manuscript pages with a burgundy rule."
-cta:
-  label: "Explore editorial services"
-  href: "/editorial"
----
-
 There is a persistent idea that editing is proofreading with a bigger budget. It is worth taking apart, because authors who believe it tend to buy the wrong service, at the wrong stage, and then conclude that editing did not help.
 
 Editing is really four different jobs that happen in a fixed order. Doing them out of order wastes money.
@@ -47,3 +35,4 @@ Every stage assumes the one before it is finished. Copyediting a manuscript that
 The most common expensive mistake we see is an author who has paid for a light copyedit, been told the book reads well, and gone to print with a structural problem nobody was asked to look for.
 
 Ask what stage your manuscript is at. Buy that.
+

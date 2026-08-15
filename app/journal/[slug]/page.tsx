@@ -8,14 +8,22 @@ import Button from '@/components/Button';
 import ArticleCard from '@/components/ArticleCard';
 import {
   getArticle,
+  getArticleFiles,
   getArticleSlugs,
   getArticleMeta,
   getRelatedArticles,
+  fileForRouteSlug,
   formatDate,
 } from '@/lib/journal';
 
 export function generateStaticParams() {
   return getArticleSlugs().map((slug) => ({ slug }));
+}
+
+/** Route slug -> source file, or null if there is no such article. */
+function resolve(slug: string): string | null {
+  const file = fileForRouteSlug(slug);
+  return getArticleFiles().includes(file) ? file : null;
 }
 
 export async function generateMetadata({
@@ -24,8 +32,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  if (!getArticleSlugs().includes(slug)) return {};
-  const meta = getArticleMeta(slug);
+  const file = resolve(slug);
+  if (!file) return {};
+  const meta = getArticleMeta(file);
   return {
     title: meta.title,
     description: meta.standfirst,
@@ -42,10 +51,11 @@ export async function generateMetadata({
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  if (!getArticleSlugs().includes(slug)) notFound();
+  const file = resolve(slug);
+  if (!file) notFound();
 
-  const article = await getArticle(slug);
-  const related = getRelatedArticles(slug, article.category);
+  const article = await getArticle(file);
+  const related = getRelatedArticles(file, article.category);
 
   const schema = {
     '@context': 'https://schema.org',

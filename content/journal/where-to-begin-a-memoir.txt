@@ -1,0 +1,8 @@
+title: Where to begin a memoir when you don't know where to begin
+image: memoir.svg
+alt: An abstract arc composition in burgundy suggesting a horizon or a road.
+standfirst: Nobody starts at the beginning. The people who finish memoirs start at a specific afternoon and work outward.
+category: Ghostwriting
+date: 2026-04-30
+cta-label: Talk to us about your book
+cta-href: /start-your-book?service=ghostwriting

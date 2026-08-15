@@ -1,0 +1,8 @@
+title: What it costs to publish a book in India, and why
+image: costs.svg
+alt: A stepped abstract diagram in ivory and charcoal suggesting stacked production costs.
+standfirst: Publishing quotes vary by a factor of ten for what looks like the same service. Here is what is actually inside the number.
+category: Publishing
+date: 2026-05-27
+cta-label: See publishing options
+cta-href: /publish
