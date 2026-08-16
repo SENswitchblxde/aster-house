@@ -95,27 +95,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </Container>
         </header>
 
-        <Reveal>
-          {/*
-            Height is clamped rather than a fixed ratio: an aspect ratio scales
-            with viewport width, so 21/9 becomes 800px tall on a 1920 monitor
-            and taller still on an ultrawide. This keeps the band a consistent
-            slice of the screen on a phone, a laptop and a 34-inch display.
-          */}
+    <Reveal>
           <div className="mx-auto w-full max-w-[68rem] px-6 sm:px-10 lg:px-14">
             <div className="relative aspect-[16/9] w-full overflow-hidden bg-paper-deep">
-            <Image
-              src={article.heroImage}
-              alt={article.heroAlt}
-              fill
-              priority
-              unoptimized
-              sizes="100vw"
-              className="object-cover"
-            />
+              <Image
+                src={article.heroImage}
+                alt={article.heroAlt}
+                fill
+                priority
+                unoptimized
+                sizes="(min-width: 1088px) 1024px, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </Reveal>
-
+        
         <Container>
           <div
             className="prose-editorial mx-auto mt-16 max-w-[42rem] sm:mt-24"
