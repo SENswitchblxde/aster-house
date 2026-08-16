@@ -1,0 +1,8 @@
+title: Do I Need an ISBN? What Authors Need to Know
+image: aster-house-isbn-blog-final-1.png
+alt: An open book being read outdoors, with the headline “Does my book need an ISBN? What’s an ISBN anyway?”
+standfirst: Do you actually need an ISBN for your book? Here’s what authors need to know about ISBNs, editions, formats, distribution and publishing in India.
+category: Publishing
+date: 2026-08-16
+cta-label: Explore book production
+cta-href: /create
