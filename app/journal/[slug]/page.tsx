@@ -102,10 +102,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             and taller still on an ultrawide. This keeps the band a consistent
             slice of the screen on a phone, a laptop and a 34-inch display.
           */}
-          <div
-            className="relative w-full overflow-hidden bg-paper-deep"
-            style={{ height: 'clamp(220px, 38vw, 560px)' }}
-          >
+          <div className="mx-auto w-full max-w-[68rem] px-6 sm:px-10 lg:px-14">
+            <div className="relative aspect-[16/9] w-full overflow-hidden bg-paper-deep">
             <Image
               src={article.heroImage}
               alt={article.heroAlt}
