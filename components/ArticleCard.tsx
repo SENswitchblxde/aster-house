@@ -13,7 +13,7 @@ export default function ArticleCard({
   return (
     <article className={featured ? 'lg:col-span-2' : ''}>
       <Link href={`/journal/${article.slug}`} className="group block">
-        <div className="relative aspect-[16/10] overflow-hidden bg-paper-deep">
+        <div className="relative aspect-[16/9] overflow-hidden bg-paper-deep">
           <Image
             src={article.heroImage}
             alt={article.heroAlt}
