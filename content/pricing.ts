@@ -9,4 +9,35 @@ export type PriceLine = {
  * Prices are intentionally placeholders. Replace the `price` strings with real
  * figures before launch, or wire this array to the CMS.
  */
-
+export const pricing: PriceLine[] = [
+  {
+    service: 'Manuscript Assessment',
+    price: '',
+    note: 'A full read and a written report. Priced by word count.',
+    href: '/editorial#manuscript-assessment',
+  },
+  {
+    service: 'Editorial',
+    price: '',
+    note: 'Developmental editing, copyediting and proofreading, quoted separately or together.',
+    href: '/editorial',
+  },
+  {
+    service: 'Publishing',
+    price: '',
+    note: 'Editorial, design, production, ISBN, print files and distribution setup.',
+    href: '/publish',
+  },
+  {
+    service: 'Ghostwriting',
+    price: '',
+    note: 'Scoped per book. Depends on length, research and interview time.',
+    href: '/ghostwriting',
+  },
+  {
+    service: 'Bespoke Books',
+    price: '',
+    note: 'Private and institutional editions, quoted against specification and print run.',
+    href: '/create',
+  },
+];
