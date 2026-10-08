@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Container from './Container';
 import { Wordmark } from './Header';
-import { footerNav, site } from '@/content/site';
+import { footerNav, site, socials } from '@/content/site';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -22,6 +22,26 @@ export default function Footer() {
             >
               {site.email}
             </a>
+
+            <div className="mt-8">
+              <h2 className="eyebrow text-ink-faint">Elsewhere</h2>
+              <ul className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+                {socials.map((s) => (
+                  <li key={s.name}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-text text-[0.95rem] text-ink-soft link-draw hover:text-ink"
+                    >
+                      {s.label}
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
           </div>
 
           <nav aria-label="Services">

@@ -70,6 +70,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     url: site.url,
     email: site.email,
     address: { '@type': 'PostalAddress', addressCountry: 'IN' },
+    sameAs: [
+      'https://www.instagram.com/asterhousebooks',
+      'https://www.linkedin.com/company/aster-house-books/',
+      'https://www.facebook.com/profile.php?id=61593367052395',
+    ],
     areaServed: 'Worldwide',
   };
 

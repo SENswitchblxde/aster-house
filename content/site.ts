@@ -35,6 +35,24 @@ export const footerNav = {
   ],
 } as const;
 
+export const socials = [
+  {
+    name: 'Instagram',
+    label: '@asterhousebooks',
+    href: 'https://www.instagram.com/asterhousebooks',
+  },
+  {
+    name: 'LinkedIn',
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/aster-house-books/',
+  },
+  {
+    name: 'Facebook',
+    label: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61593367052395',
+  },
+] as const;
+
 export const CTA = {
   start: { label: 'Start your book', href: '/start-your-book' },
   publishing: { label: 'Explore publishing', href: '/publish' },
