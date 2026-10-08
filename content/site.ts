@@ -35,23 +35,37 @@ export const footerNav = {
   ],
 } as const;
 
-export const socials = [
+/**
+ * `icon` is an optional path to a file in /public/social. Each platform
+ * supplies its own official mark — download them from the brand pages listed
+ * in public/social/README.md and drop them in. Leave `icon` unset and the
+ * link simply renders as type.
+ */
+export const socials: {
+  name: string;
+  label: string;
+  href: string;
+  icon?: string;
+}[] = [
   {
     name: 'Instagram',
     label: '@asterhousebooks',
     href: 'https://www.instagram.com/asterhousebooks',
+    icon: '/social/instagram.svg',
   },
   {
     name: 'LinkedIn',
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/company/aster-house-books/',
+    icon: '/social/linkedin.svg',
   },
   {
     name: 'Facebook',
     label: 'Facebook',
     href: 'https://www.facebook.com/profile.php?id=61593367052395',
+    icon: '/social/facebook.svg',
   },
-] as const;
+];
 
 export const CTA = {
   start: { label: 'Start your book', href: '/start-your-book' },
