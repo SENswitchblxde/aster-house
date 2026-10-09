@@ -34,7 +34,7 @@ export default function Footer() {
                   aria-label={`${s.name} — ${s.label} (opens in a new tab)`}
                   className="group relative inline-flex items-center gap-3 font-display text-[1.35rem] leading-none text-ink transition-colors duration-300 hover:text-burgundy sm:text-[1.6rem]"
                 >
-                  <SocialIcon src={s.icon} />
+                  <SocialIcon src={s.icon} scale={s.scale} />
                   <span className="link-draw">{s.label}</span>
                   <span
                     aria-hidden="true"

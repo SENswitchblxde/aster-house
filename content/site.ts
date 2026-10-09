@@ -36,16 +36,19 @@ export const footerNav = {
 } as const;
 
 /**
- * `icon` is an optional path to a file in /public/social. Each platform
- * supplies its own official mark — download them from the brand pages listed
- * in public/social/README.md and drop them in. Leave `icon` unset and the
- * link simply renders as type.
+ * `icon` points at a file in /public/social. Each mark is the official asset
+ * from that platform's own brand pack — see public/social/README.md.
+ *
+ * `scale` is an optical adjustment, not a size. A solid mark reads heavier
+ * than an outlined one at the same height, so the filled square and circle
+ * sit fractionally back from the Instagram camera to look like one set.
  */
 export const socials: {
   name: string;
   label: string;
   href: string;
   icon?: string;
+  scale?: number;
 }[] = [
   {
     name: 'Instagram',
@@ -57,13 +60,15 @@ export const socials: {
     name: 'LinkedIn',
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/company/aster-house-books/',
-    icon: '/social/linkedin.svg',
+    icon: '/social/linkedin.png',
+    scale: 0.96,
   },
   {
     name: 'Facebook',
     label: 'Facebook',
     href: 'https://www.facebook.com/profile.php?id=61593367052395',
-    icon: '/social/facebook.svg',
+    icon: '/social/facebook.png',
+    scale: 0.94,
   },
 ];
 

@@ -1,45 +1,44 @@
 # Social icons
 
-Three files go here. Once they exist, the footer picks them up with no code
-change — nothing to switch on.
+The three marks in the footer. All are official assets, taken from each
+platform's own brand pack:
 
-    instagram.svg
-    linkedin.svg
-    facebook.svg
-
-Until then the links render as type only, which is how the site looks now.
-
-## Where to get them
-
-Each platform's mark is its own trademark, and each company publishes the
-official file along with rules for using it. Use theirs rather than a redrawn
-copy — it's both correct and sharper.
-
-Download the **glyph** or **icon** version: the plain single-colour mark, not
-the wordmark and not the full-colour app tile.
-
-- Instagram — https://about.meta.com/brand/resources/instagram/icons
-- Facebook  — https://about.meta.com/brand/resources/facebook/logo
-- LinkedIn  — https://brand.linkedin.com/downloads
-
-Rename each to the filenames above and drop them in this folder.
-
-If a download gives you a `.png` instead of a `.svg`, that works too — change
-the `icon:` path in `content/site.ts` to match the extension.
+    instagram.svg   Instagram_Glyph_Black.svg      (vector)
+    linkedin.png    InBug-Black.png, resized       (® retained)
+    facebook.png    Facebook_Logo_Secondary.png, resized
 
 ## How they're coloured
 
-The footer uses each file as a CSS mask rather than displaying it directly, so
-the glyph is painted in the same ink colour as the link beside it and turns
-burgundy on hover along with the text. Whatever colour the downloaded file
-happens to be is ignored.
+The footer uses each file as a CSS mask rather than displaying it, so the
+glyph is painted in the same ink as the link beside it and turns burgundy on
+hover along with the text. Whatever colour the file happens to be is ignored —
+only its transparency matters.
 
-To show a mark in its own colours instead, open `components/Footer.tsx` and
-pass `monochrome={false}`:
+That means any replacement must have a **transparent background**. A mark on a
+white or coloured tile will mask as a solid block. If you ever need one shown
+in its own colours, pass `monochrome={false}` to `SocialIcon` in
+`components/Footer.tsx`.
 
-    <SocialIcon src={s.icon} monochrome={false} />
+## Optical sizing
 
-## To drop icons entirely
+`scale` in `content/site.ts` is an optical adjustment, not a size. A solid
+mark reads heavier than an outlined one at the same height, so:
 
-Delete the three `icon:` lines in `content/site.ts`. The links go back to
-being type only.
+    Instagram   1.00   outlined camera, lightest
+    LinkedIn    0.96   solid square, heaviest
+    Facebook    0.94   solid circle
+
+Nudge these if a replacement mark sits differently.
+
+## LinkedIn's ®
+
+Every LinkedIn In Bug ships with the registered mark attached, and there is no
+official version without it. It is kept here rather than cropped. At footer
+size it is sub-pixel and invisible; it only shifts the bug a fraction left of
+centre, which the scale above accounts for.
+
+## Replacing or removing
+
+Drop a new file in with the same name and it is picked up on the next build.
+To remove icons entirely, delete the three `icon:` lines in
+`content/site.ts` — the links go back to being type only.

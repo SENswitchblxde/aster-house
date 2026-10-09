@@ -5,32 +5,33 @@ import { useState } from 'react';
 /**
  * A platform mark from /public/social.
  *
- * Two things it handles that a plain <img> doesn't:
+ * The file is used as a CSS mask rather than displayed directly, so the glyph
+ * is painted in `currentColor` — it matches the ink of the link beside it and
+ * turns burgundy on hover along with the text. The official marks arrive in
+ * black, blue or white depending on the pack; masking makes that irrelevant.
  *
- * 1. MISSING FILE — the icons are downloaded from each platform's own brand
- *    page rather than committed here (see public/social/README.md). Until a
- *    file exists, this renders nothing instead of a broken-image glyph.
+ * `scale` is an optical adjustment: a solid mark reads heavier than an
+ * outlined one at the same height, so the filled marks sit fractionally
+ * smaller to look like one set. See content/site.ts.
  *
- * 2. COLOUR — a downloaded glyph arrives in the platform's own black or brand
- *    colour, which sits awkwardly beside ink-coloured type. Using the file as
- *    a CSS mask paints it in `currentColor` instead, so it matches the link it
- *    sits beside and turns burgundy on hover along with the text.
- *
- *    Pass `monochrome={false}` to show the file exactly as supplied, in its
- *    own colours. Use that if a platform's guidelines require full colour.
+ * `monochrome={false}` shows the file exactly as supplied instead, for a mark
+ * whose guidelines require full colour.
  */
 export default function SocialIcon({
   src,
+  scale = 1,
   monochrome = true,
 }: {
   src?: string;
+  scale?: number;
   monochrome?: boolean;
 }) {
   const [missing, setMissing] = useState(false);
 
   if (!src || missing) return null;
 
-  // Full colour: the file as supplied.
+  const size = `${1.05 * scale}em`;
+
   if (!monochrome) {
     return (
       /* eslint-disable-next-line @next/next/no-img-element */
@@ -38,10 +39,9 @@ export default function SocialIcon({
         src={src}
         alt=""
         aria-hidden="true"
-        width={22}
-        height={22}
         onError={() => setMissing(true)}
-        className="h-[1.05em] w-[1.05em] shrink-0"
+        className="shrink-0 object-contain"
+        style={{ width: size, height: size }}
       />
     );
   }
@@ -49,9 +49,8 @@ export default function SocialIcon({
   return (
     <>
       {/*
-        A zero-size <img> is the only reliable way to know whether the file
-        exists — CSS masks fail silently, and a failed mask would otherwise
-        paint a solid square.
+        A zero-size <img> is the only reliable way to know the file is there.
+        CSS masks fail silently, and a failed mask paints a solid block.
       */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -63,8 +62,10 @@ export default function SocialIcon({
       />
       <span
         aria-hidden="true"
-        className="h-[1.05em] w-[1.05em] shrink-0 bg-current opacity-75 transition-opacity duration-300 group-hover:opacity-100"
+        className="shrink-0 bg-current opacity-80 transition-opacity duration-300 group-hover:opacity-100"
         style={{
+          width: size,
+          height: size,
           maskImage: `url(${src})`,
           WebkitMaskImage: `url(${src})`,
           maskSize: 'contain',
