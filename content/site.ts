@@ -59,7 +59,7 @@ export const socials: {
   {
     name: 'LinkedIn',
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/aster-house-books/',
+    href: 'https://www.linkedin.com/company/aster-house-books/?viewAsMember=true',
     icon: '/social/linkedin.png',
     scale: 0.96,
   },
