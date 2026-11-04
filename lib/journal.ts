@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
+import gfm from 'remark-gfm';
 import html from 'remark-html';
 
 const JOURNAL_DIR = path.join(process.cwd(), 'content', 'journal');
@@ -171,7 +172,11 @@ export function getArticleMeta(file: string): ArticleMeta {
 export async function getArticle(file: string): Promise<Article> {
   const meta = getArticleMeta(file);
   const { content } = parseMarkdown(file);
-  const processed = await remark().use(html).process(content);
+  // GFM gives us tables, strikethrough and task lists in plain markdown.
+  // sanitize: false lets an article carry its own HTML blocks (callouts,
+  // edit specimens, styled tables). Safe here because every article is
+  // committed to this repo by the studio — never user-submitted.
+  const processed = await remark().use(gfm).use(html, { sanitize: false }).process(content);
 
   let body = processed.toString();
 

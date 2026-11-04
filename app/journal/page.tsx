@@ -8,7 +8,7 @@ import { getAllArticles, CATEGORIES } from '@/lib/journal';
 export const metadata: Metadata = {
   title: 'The Aster House Journal — notes on writing, editing and publishing',
   description:
-    'Practical writing about manuscripts, editing, book design, ghostwriting and the publishing process — including what publishing a book in India actually costs.',
+    'Practical writing about manuscripts, editing, book design, ghostwriting and the publishing process.',
   alternates: { canonical: '/journal' },
 };
 

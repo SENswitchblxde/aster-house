@@ -1,0 +1,8 @@
+title: Your draft needs help, but which kind?
+image: types-of-editing.svg
+alt: Five nested frames narrowing from a whole book to a single line of type, ending in a burgundy full stop.
+standfirst: Editing isn't one job. Here are the five kinds, what each one fixes, and the order your draft should meet them, with one very badly behaved dragon.
+category: Editing
+date: 2026-11-04
+cta-label: Explore editorial services
+cta-href: /editorial

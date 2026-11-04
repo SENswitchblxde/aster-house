@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Five nested frames narrowing from a whole book to a single line of type, ending in a burgundy full stop">
+  <rect width="1200" height="675" fill="#EDE5D8"/>
+
+  <!-- 1. the whole book -->
+  <rect x="110" y="70" width="980" height="535" fill="none" stroke="#252321" stroke-opacity="0.12" stroke-width="2"/>
+
+  <!-- 2. the chapters, in order -->
+  <g fill="#E4DACA">
+    <rect x="170" y="130" width="64" height="415"/>
+    <rect x="250" y="130" width="64" height="415"/>
+  </g>
+  <rect x="330" y="130" width="700" height="415" fill="#F5F0E7"/>
+  <rect x="330" y="130" width="700" height="415" fill="none" stroke="#252321" stroke-opacity="0.16" stroke-width="2"/>
+
+  <!-- page text above and below the paragraph -->
+  <g stroke="#252321" stroke-opacity="0.13" stroke-width="2">
+    <path d="M400 175h560M400 198h520M400 482h560M400 505h430"/>
+  </g>
+
+  <!-- 3. the paragraph -->
+  <rect x="380" y="225" width="600" height="230" fill="#FBF8F2"/>
+  <rect x="380" y="225" width="600" height="230" fill="none" stroke="#252321" stroke-opacity="0.22" stroke-width="2"/>
+  <g stroke="#252321" stroke-opacity="0.24" stroke-width="3">
+    <path d="M425 262h510M425 292h480M425 322h500M425 392h455M425 422h300"/>
+  </g>
+
+  <!-- 4. the sentence -->
+  <rect x="410" y="337" width="540" height="40" fill="none" stroke="#641F2A" stroke-opacity="0.55" stroke-width="2"/>
+  <path d="M425 357h455" stroke="#252321" stroke-opacity="0.7" stroke-width="4"/>
+
+  <!-- 5. the full stop -->
+  <circle cx="898" cy="359" r="8" fill="#641F2A"/>
+  <circle cx="898" cy="359" r="22" fill="none" stroke="#641F2A" stroke-width="2"/>
+</svg>
