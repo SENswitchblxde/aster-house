@@ -186,6 +186,9 @@
     margin: 4.5rem 0 -1.75rem;
     color: #8c857b;
   }
+  /* The negative margin above tucks a heading under the label. Anything else
+     (a paragraph, a figure) would be pulled up into it, so push it back down. */
+  .prose-editorial .stage + :not(h2) { margin-top: 2.5rem; }
   .prose-editorial .stage span:first-child { color: var(--burgundy); }
   .prose-editorial .stage span + span::before {
     content: '';

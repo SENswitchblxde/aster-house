@@ -13,21 +13,21 @@ So here's a straight decision guide: who should write one, who shouldn't, what k
 
 ## The good reasons
 
-<p class="stage"><span>Reason 1</span><span>You know something other people need</span></p>
+<p class="stage"><span>Reason 1</span> <span>You know something other people need</span></p>
 
 Not your whole life story. One thing, learned the hard way, that would save someone else the trouble. How to hand a family firm to the next generation without a war at the dining table. How to sell to government buyers. Why your first three hires matter more than your first funding round.
 
 If you can name the reader and the problem, you probably have a book.
 
-<p class="stage"><span>Reason 2</span><span>You keep explaining the same thing</span></p>
+<p class="stage"><span>Reason 2</span> <span>You keep explaining the same thing</span></p>
 
 If you've given the same talk, the same onboarding speech or the same advice over chai forty times, that's a chapter outline in disguise. A book lets you say it properly, once, and hand it over.
 
-<p class="stage"><span>Reason 3</span><span>The story will be lost otherwise</span></p>
+<p class="stage"><span>Reason 3</span> <span>The story will be lost otherwise</span></p>
 
 This is especially true of family businesses. The founder who started with one shop and a borrowed scooter won't be around forever, and the people who remember the early decisions get fewer every year. A company history or legacy book is often less about readers in bookshops and more about the people who'll be running the business in twenty years.
 
-<p class="stage"><span>Reason 4</span><span>You want to be taken seriously in your field</span></p>
+<p class="stage"><span>Reason 4</span> <span>You want to be taken seriously in your field</span></p>
 
 A well-made book still carries weight. It gets you invited to speak, quoted and remembered. But note the words *well-made*. A thin, rushed book does the opposite: it tells everyone exactly how much care went into it.
 
@@ -89,7 +89,7 @@ If you can't write that sentence yet, you're not ready to write the book. That's
 
 This is where most business books quietly die. Not because the idea was bad, but because nobody planned for the hours.
 
-<p class="stage"><span>Route 1</span><span>Writing it yourself</span></p>
+<p class="stage"><span>Route 1</span> <span>Writing it yourself</span></p>
 
 Most business books land somewhere between 40,000 and 60,000 words. At a steady 500 words a day, that's three to four months of daily writing for a first draft, before any rewriting, any editing, or any of the weeks when the business needs all of you.
 
@@ -97,7 +97,7 @@ Realistically, a founder writing alone is looking at a year or more. It can abso
 
 <p class="needs"><span>This suits you if</span>you enjoy writing, you have a regular window you can protect, and you want every sentence to be yours.</p>
 
-<p class="stage"><span>Route 2</span><span>Working with a ghostwriter</span></p>
+<p class="stage"><span>Route 2</span> <span>Working with a ghostwriter</span></p>
 
 A ghostwriter writes the book with you, in your voice, from your ideas and experience. You still put in time, but it's a different kind of time: talking rather than typing.
 
@@ -107,7 +107,7 @@ At Aster House Books, that usually means 15 to 40 hours of recorded interviews, 
 
 Is a ghostwritten book still *your* book? Yes. The ideas, the experience, the judgement and the voice are yours. The ghostwriter's job is to get them onto the page in the right order, and the finished manuscript belongs to you.
 
-<p class="stage"><span>Either way</span><span>The part people forget</span></p>
+<p class="stage"><span>Either way</span> <span>The part people forget</span></p>
 
 The manuscript is not the book. After it come editing, cover and interior design, proofreading, ISBN and printing. Give that a few months too, and don't let anyone rush it. A business book gets judged by how it looks on a desk as much as by what's inside.
 
