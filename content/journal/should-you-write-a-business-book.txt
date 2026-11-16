@@ -1,0 +1,8 @@
+title: Should you write a book about your business?
+image: should-you-write-a-business-book.jpg
+alt: An empty open-plan office in daylight: chairs pushed back from a long wooden desk scattered with laptops, notebooks, a headset and pens, plants along the shelves and window.
+standfirst: Everyone tells founders they should write a book. Here's how to tell whether you actually should, what kind it would be, and what it will really cost you in time.
+category: Authors
+date: 2026-11-16
+cta-label: Explore ghostwriting
+cta-href: /ghostwriting
