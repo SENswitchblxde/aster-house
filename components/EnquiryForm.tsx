@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { useState, type FormEvent } from 'react';
 import Button from './Button';
 import { RadioGroup, SelectField, TextArea, TextField } from './FormField';
+import { getAttribution } from '@/lib/attribution';
 
 const INTENTS = [
   'Publish a finished manuscript',
@@ -77,10 +78,26 @@ export default function EnquiryForm() {
     setSending(true);
     setError(null);
 
+    const payload = new FormData(form);
+
+    /*
+      Where they actually came from, recorded when they first arrived.
+      Sent alongside the "How did you hear about us?" answer rather than
+      instead of it — what someone remembers and what their browser reports
+      are both worth knowing, and they often disagree.
+    */
+    const attribution = getAttribution();
+    if (attribution) {
+      payload.append('Came from', attribution.source);
+      payload.append('Landed on', attribution.landingPage);
+      if (attribution.referrer) payload.append('Referrer URL', attribution.referrer);
+      if (attribution.campaign) payload.append('Campaign', attribution.campaign);
+    }
+
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
-        body: new FormData(form),
+        body: payload,
         headers: { Accept: 'application/json' },
       });
       if (!response.ok) throw new Error(String(response.status));
